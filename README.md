@@ -2,11 +2,11 @@
 
 API REST Spring Boot para importação em lote de dados de funcionários a partir de arquivos Excel (XLSX/XLS).
 
-## 🎯 Sobre o projeto
+## Sobre o projeto
 
 Sistema que processa planilhas Excel contendo dados de funcionários e persiste as informações em banco de dados PostgreSQL. Inclui validação de entrada, conversão de tipos (especialmente `BigDecimal` para salários), tratamento centralizado de exceções com `@RestControllerAdvice` e persistência via Spring Data JPA.
 
-## 🛠️ Tecnologias
+## Tecnologias
 
 - **Java 17+**
 - **Spring Boot 3.x**
@@ -16,14 +16,14 @@ Sistema que processa planilhas Excel contendo dados de funcionários e persiste 
 - **Maven**
 - **Jakarta Persistence API**
 
-## 📋 Pré-requisitos
+## Pré-requisitos
 
 - JDK 17 ou superior
 - Maven 3.8+
 - PostgreSQL 12+
 - Git
 
-## 🚀 Instalação e configuração
+## Instalação e configuração
 
 ### 1. Clonar o repositório
 
@@ -66,7 +66,7 @@ mvn spring-boot:run
 
 A aplicação estará disponível em `http://localhost:8080`.
 
-## 📁 Estrutura do projeto
+## Estrutura do projeto
 
 ```
 src/main/java/com/example/lerArquivo/
@@ -83,7 +83,7 @@ src/main/java/com/example/lerArquivo/
     └── GlobalExceptionHandler.java     # Tratamento centralizado
 ```
 
-## 🔌 Endpoints
+## Endpoints
 
 ### Importar arquivo Excel
 
@@ -109,7 +109,7 @@ curl -X POST http://localhost:8080/api/importar/arquivoexcel \
 "Erro de validação, arquivo inválido: Arquivo vazio"
 ```
 
-## 📊 Formato esperado do Excel
+## Formato esperado do Excel
 
 A planilha deve ter as seguintes colunas (a partir da linha 2):
 
@@ -128,7 +128,7 @@ ID    | CPF           | Nome              | Telefone      | Salário
       | 987.654.321-0 | Maria Santos      | (83) 99876-5432 | 4.200,50
 ```
 
-## ⚙️ Recursos principais
+## Recursos principais
 
 ✅ Suporte para arquivos XLSX e XLS  
 ✅ Validação de dados de entrada  
@@ -138,7 +138,7 @@ ID    | CPF           | Nome              | Telefone      | Salário
 ✅ Logs estruturados  
 ✅ Transações atômicas  
 
-## 🔍 Tratamento de erros
+## Tratamento de erros
 
 A API trata os seguintes cenários:
 
@@ -176,7 +176,7 @@ $form = @{
 Invoke-WebRequest -Uri $uri -Method Post -Form $form
 ```
 
-## 🏗️ Próximos passos
+## Próximos passos
 
 - [ ] Adicionar validação de CPF (Modulo 11)
 - [ ] Implementar suporte para importação de CSV
@@ -185,14 +185,14 @@ Invoke-WebRequest -Uri $uri -Method Post -Form $form
 - [ ] Adicionar logs estruturados com SLF4J
 - [ ] Cobertura de testes com JUnit 5
 
-## 📚 Referências
+## Referências
 
 - [Spring Boot Documentation](https://spring.io/projects/spring-boot)
 - [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 - [Apache POI](https://poi.apache.org/)
 - [PostgreSQL](https://www.postgresql.org/)
 
-## 👤 Autor
+## Autor
 
 André Luiz Santana  
 GitHub: [@andreluizsantana](https://github.com/andreluizsantana)
